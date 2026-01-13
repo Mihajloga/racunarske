@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="Stylesheet" href="Stylesheet.css">
+    <script src="https://kit.fontawesome.com/590dcf6971.js" crossorigin="anonymous"></script>
+    <title>Kozmetička prodavnica </title>
+</head>
+<body>
+    <h1 class="line">Pink & Care!</h1>
+    <h2>Kozmetička prodavnica</h2>
+    <style>
+         :root {
+            --background-color: pink;
+        }
+        [data-theme='dark'] {
+            --background-color: black;
+        }
+        body {
+            background-color: var(--background-color);
+        }
+    </style>
+
+    <button id="Menjatemo">Tema</button>
+    <script>
+        function menjaboju() {
+            let currentTheme = localStorage.getItem('theme');
+            if (!currentTheme || currentTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+        document.getElementById('Menjatemo').addEventListener('click', menjaboju);
+    </script>
+    <nav class="navbar">
+        <ul>
+            <li><a href="ONama.html">O nama</a> </li>
+
+            <li> <a href="Proizvodi.html">Proizvodi</a></li>
+
+            <li><a href="Kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <main>
+    
+        <img id ="heroslika_1" src="Slike/s-l1200.jpg" />
+        <div class="uvodniborder">
+        <p id="uvodnitag">
+            Otkrijte svet lepote, nege i mirisa. Nudimo širok izbor šminke, parfema i
+            kozmetičkih proizvoda poznatih brendova, uz redovne akcije i popuste. Neke od
+            mnogobrojnih proizvoda koje imamo u ponudi su:
+        </p>
+    </div>
+   
+   <ul class="opcije">
+            <li ><img id ="slikap_1" src="Slike/imas.jpg" /> 
+            Najpoznati brendovi parfema i neverovatni mirisi za svaku priliku!</li>
+            
+            <li><img id ="slikap_2" src="Slike/lip.jpg" />
+           Za savršeno lice:maskare,puderi i ruzevi. </li>
+         
+        </ul>
+    </div>
+        <p id="uvodnitag">
+            Ako bi ste hteli da nas kontaktirate, kliknite na "Kontakt " u navigacionom baru.
+        </p>
+        
+</main>
+<footer class="footer">
+    © 2025 Natalija Jočin
+</footer>
+</body>
+</html>
